@@ -3,8 +3,13 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.EditText
+import android.widget.TextView
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var textBack:TextView
 
     val nome = "Alex"
     val TAG = MainActivity::class.simpleName
@@ -13,12 +18,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d(TAG, "la $TAG è stata Creata")
+
+        var textView:TextView = findViewById(R.id.benvenuto)
     }
 
     override fun onResume(){
         super.onResume()
         Log.d(TAG, "la $TAG è in Resume")
         println("Bentornato $nome")
+
+        textBack = findViewById(R.id.bentornato)
+
+
     }
 
     override fun onStart(){
