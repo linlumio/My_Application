@@ -10,6 +10,7 @@ import org.w3c.dom.Text
 class MainActivity : AppCompatActivity() {
 
     lateinit var textBack:TextView
+    //ricorda che se non andrò mai a inizializzarla darà errore
 
     val nome = "Alex"
     val TAG = MainActivity::class.simpleName
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "la $TAG è stata Creata")
 
         var textView:TextView = findViewById(R.id.benvenuto)
+        //meglio usare un solo text view
     }
 
     override fun onResume(){
